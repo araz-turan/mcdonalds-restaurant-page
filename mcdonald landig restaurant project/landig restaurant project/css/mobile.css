@@ -1,0 +1,143 @@
+.burger-icon ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    transition: all 1000ms ease;
+    transform: translateX(20rem);
+    right: 0.5rem;
+    top: 3.75rem;
+    width: 10rem;
+    z-index: 3;
+    gap: 2.25rem;
+} 
+#burger-check:checked + label + ul {
+    transform: translateX(0);
+    transition: all 1000ms ease;
+}
+header .bottom-header {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2,auto);
+    margin: 0 auto;
+    gap: 0.75rem;
+}
+.small-text-fordesktop {
+    display: none;
+}
+.small-text-formobile {
+    display: block;
+}
+header .bottom-header .header-bottom-text {
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+header .bottom-header .header-bottom-text .grand-text {
+    text-shadow: none;
+    max-width: 100%;
+}
+header .bottom-header .header-bottom-text .grand-text h1 {
+    line-height: 54px;
+    font-size: 2.25rem;
+}
+header .bottom-header .small-text-formobile {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 7rem auto 0 auto;
+}
+header .bottom-header .small-text .spans-small-text span:first-child {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+header .bottom-header .small-text .spans-small-text span:last-child {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+header .bottom-header .small-text .buttons-small-text {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 119px 126px;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus {
+    width: 7.5rem;
+    height: 2.5rem;
+    padding: 0.25rem 0.75rem;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus button {
+    width: 1rem;
+    height: 1.25rem;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus span {
+    font-size: 1rem;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus span::after {
+    left: 1.25rem;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus span::before {
+    right: 1.25rem;
+}
+header .bottom-header .small-text .buttons-small-text .order-button {
+    padding: 0.75rem 1rem;
+    height: 2.75rem;
+    width: 8.15rem;
+}
+header .bottom-header .small-text .buttons-small-text .order-button p {
+    font-size: 14px;
+}
+header .bottom-header .small-text .buttons-small-text .order-button i {
+    font-size: 0.9rem;
+}
+header .bottom-header .header-bottom-img .delivery-clock {
+    top: auto;
+    bottom: -4.25rem;
+    right: 35%;
+    transform: translateX(50%);
+    border-radius: 0 50px 50px 50px;
+}
+header .bottom-header .header-bottom-img .delivery-clock .clock-icon svg {
+    width: 18px;
+    height: 18px;
+}
+header .bottom-header .header-bottom-img .delivery-clock .clock-icon span {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2.25rem;
+}
+header .bottom-header .header-bottom-img .delivery-clock p {
+    font-weight: 400;
+    font-size: 14px;
+}
+main .map-search-box h3 {
+    font-size: 1.25rem;
+    line-height: 30px;
+}
+main .map-search-box p {
+    font-size: 0.75rem;
+    line-height: 18px;
+}
+main .map-search-box .search-input a, main .map-search-box .search-input input::placeholder {
+    font-size: 13px;
+    line-height: 1.25rem;
+}
+main .map-search-box img:last-child {
+    top: -3rem;
+}
+footer .footer .links-and-times {
+    gap: 30px;
+}
+footer .footer .links-and-times div {
+    gap: 0.75rem;
+}
+footer .footer .links-and-times div h4 {
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+footer .footer .links-and-times div a, footer .footer .links-and-times div p {
+    font-size: 0.75rem;
+}

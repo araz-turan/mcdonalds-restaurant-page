@@ -1,0 +1,840 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins';
+    background-color: var(--color_FFFEF9);
+    position: relative;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/landig\ restaurant\ project/fonts/Poppins/Poppins-Black.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/landig\ restaurant\ project/fonts/Poppins/Poppins-ExtraBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/landig\ restaurant\ project/fonts/Poppins/Poppins-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/landig\ restaurant\ project/fonts/Poppins/Poppins-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/landig\ restaurant\ project/fonts/Poppins/Poppins-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/landig\ restaurant\ project/fonts/Poppins/Poppins-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/landig\ restaurant\ project/fonts/Poppins/Poppins-Light.woff') format('woff');
+}
+/* * degisken tanimlamak icin ':root' komutunu kullanabiliriz. */
+:root {
+    --color_FFFFFF: #FFFFFF;
+    --color_FFFEF9: #FFFEF9;
+    --color_FFFDE6: #FFFDE6;
+    --color_FFFCFC: #FFFCFC;
+    --color_FFEAE6: #FFEAE6;
+    --color_FFE252: #FFE252;
+    --color_FFD429: #FFD429;
+    --color_FFC300: #FFC300;
+    --color_F1F1F1: #F1F1F1;
+    --color_FFF6A3: #FFF6A3;
+    --color_E3E3E3: #E3E3E3;
+    --color_D9D9D9: #D9D9D9;
+    --color_D62822: #D62822;
+    --color_C90000: #C90000;
+    --color_7D7C7C: #7D7C7C;
+    --color_504F4F: #504F4F;
+    --color_323232: #323232;
+    --color_12131A: #12131A;
+    --color_FFF6A3B2: #FFF6A3B2;
+    --color_F1F1F166: #F1F1F166;
+    --color_7090B033: #7090B033;
+    --color_0000001A: #0000001A;
+}
+/* * bu yontemle ayni bootstrapdaki gibi classlar olusturabiliriz. */
+/* .text-danger { 
+    color: var(--color_C90000);
+} */
+/* * degiskenleri var()  komutunu icinde veriyoruz.*/
+/* h1 {
+    color: var(--color_C90000);
+} */
+/* ! --------------- */
+header {
+    margin: 1rem auto;
+    max-width: 1170px;
+}
+header nav {
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 54px 650px 187px;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .first-ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem;
+}
+header nav ul li:not(:first-child) a {
+    color: var(--color_7D7C7C);
+    font-weight: 500;
+}
+header nav ul li:first-child a {
+    color: var(--color_C90000);
+    font-weight: 600;
+
+}
+header nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+header nav .nav-links a {
+    padding: 0.25rem 1rem;
+    border: 1px var(--color_C90000) solid;
+    border-radius: 6.25rem;
+}
+header nav .nav-links a:first-child {
+    font-weight: 400;
+    color: var(--color_C90000);
+}
+header nav .nav-links a:last-child {
+    font-weight: 500;
+    color: var(--color_FFFFFF);
+    background-color: var(--color_C90000);
+}
+header nav .burger-icon {
+    display: none;
+}
+header .bottom-header {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+header .bottom-header .header-bottom-text {
+    max-width: 400px;
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    gap: 2.5rem;
+}
+header .bottom-header .header-bottom-text .grand-text {
+    text-shadow: 0 0.25rem 0.25rem var(--color_0000001A);
+    max-width: 21.5rem;
+}
+header .bottom-header .header-bottom-text .grand-text h1 {
+    font-weight: 600;
+    color: var(--color_C90000);
+    line-height: 4.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+header .bottom-header .header-bottom-text .grand-text p {
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--color_504F4F);
+}
+header .bottom-header .small-text .spans-small-text {
+    color: var(--color_323232);
+    margin-bottom: 1rem;
+}
+header .bottom-header .small-text .spans-small-text span:first-child {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+header .bottom-header .small-text .spans-small-text span:last-child {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+header .bottom-header .small-text .buttons-small-text {
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 140px 170px;
+    align-items: center;
+    gap: 2.5rem;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    width: 8.75rem;
+    height: 3rem;
+    border-radius: 6.25rem;
+    background-color: var(--color_FFFFFF);
+    border: 1px var(--color_F1F1F1) solid;
+    box-shadow: 0 0.75rem 1rem var(--color_7090B033);
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus button {
+    outline: none;
+    border: none;
+    background-color: var(--color_FFFFFF);
+    color: var(--color_7D7C7C);
+    width: 1.25rem;
+    height: 1.25rem;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus span {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--color_FFC300);
+    position: relative;
+    display: flex;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.5px;
+    height: 22px;
+    align-self: center;
+    background-color: var(--color_F1F1F1);
+    left: 1.5rem;
+}
+header .bottom-header .small-text .buttons-small-text .plus-minus span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.5px;
+    height: 22px;
+    align-self: center;
+    background-color: var(--color_F1F1F1);
+    right: 1.5rem;
+}
+header .bottom-header .small-text .buttons-small-text .order-button {
+    outline: none;
+    border: none;
+    border-radius: 6.25rem;
+    padding: 1rem 1.5rem;
+    height: 3.75rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: var(--color_FFC300);
+    box-shadow: 0 1.25rem 1.25rem var(--color_7090B033);
+    color: var(--color_323232);
+}
+header .bottom-header .small-text .buttons-small-text .order-button p {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+header .bottom-header .small-text .buttons-small-text .order-button i {
+    font-size: 1.25rem;
+}
+header .bottom-header .header-bottom-img {
+    position: relative;
+}
+header .bottom-header .header-bottom-img .delivery-clock {
+    position: absolute;
+    top: 10%;
+    right: 110%;
+    transform: translateX(50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px 50px 0 50px;
+    border: 1px solid var(--color_F1F1F166);
+    padding: 0.75rem;
+    background-color: var(--color_F1F1F1);
+}
+header .bottom-header .header-bottom-img .delivery-clock .clock-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+header .bottom-header .header-bottom-img .delivery-clock .clock-icon span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: var(--color_323232);
+}
+header .bottom-header .header-bottom-img .delivery-clock p {
+    color: var(--color_7D7C7C);
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+.small-text-formobile {
+    display: none;
+}
+main {
+    max-width: 1170px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+main .main-title h1 {
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    color: var(--color_C90000);
+}
+main .main-title h1::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    z-index: -1;
+    border-bottom: 9px var(--color_FFF6A3) solid;
+}
+main .row-category-buttons ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+main .row-category-buttons ul button {
+    outline: none;
+    border-radius: 6.25rem;
+    padding: 0.5rem 1.25rem;
+    gap: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .row-category-buttons ul li:not(:first-child) button {
+    background-color: var(--color_F1F1F1);
+    border: 1px var(--color_E3E3E3) solid;
+}
+main .row-category-buttons ul li:first-child button {
+    background-color: var(--color_FFC300);
+    border: 1px var(--color_FFD429) solid;
+}
+main .row-category-buttons ul li:first-child button span {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2.25rem;
+    color: var(--color_323232);
+    min-width: 82px;
+}
+main .row-category-buttons ul li:not(:first-child) button span {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2.25rem;
+    color: var(--color_504F4F);
+}
+main .row-category-buttons ul li:last-child button span {
+    min-width: 105px;
+}
+main .products-cards {
+    display: grid;
+    gap: 30px;
+}
+main .products-cards .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap: 1rem;
+}
+main .products-cards .products .product {
+    border-radius: 0.75rem;
+    border: 1px var(--color_E3E3E3) solid;
+    padding: 1rem;
+    gap: 0.5rem;
+    display: grid;
+    position: relative;
+}
+main .products-cards .products .product::after {
+    content: '';
+    width: 95%;
+    border-radius: 0.5rem;
+    height: 105px;
+    background-color: var(--color_FFFDE6);
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    top: 6rem;
+    z-index: -1;    
+}
+main .products-cards .products .product  .product-img {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+main .products-cards .products .product .text-stars {
+    margin: 1rem 0;
+    gap: 0.25rem;
+}
+main .products-cards .products .product .text-stars h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: var(--color_323232);
+}
+main .products-cards .products .product .text-stars p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.25rem;
+    color: var(--color_504F4F);
+}
+main .products-cards .products .product .text-stars .stars {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 0.5rem;
+} 
+main .products-cards .products .product .text-stars .stars span:last-child {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.25rem;
+    color: var(--color_7D7C7C);
+    margin-left: 0.25rem;
+}
+main .products-cards .products .product .price-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .products-cards .products .product .price-buy h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: var(--color_323232);
+}
+main .products-cards .products .product .price-buy button {
+    outline: none;
+    border: none;
+    background-color: var(--color_C90000);
+    border-radius: 0.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
+}
+main .products-cards .products .product .sale-badge {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+main .products-cards a {
+    justify-self: center;
+    margin: 1rem auto;
+    text-decoration: underline 1px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: var(--color_504F4F);
+}
+main .hover-cards {
+    display: grid;
+    margin: 3rem auto;
+}
+main .hover-cards h1 {
+    color: var(--color_C90000);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    position: relative;
+}
+main .hover-cards h1::after {
+    content: '';
+    width: 221px;
+    height: 9px;
+    background-color: var(--color_FFF6A3);
+    position: absolute;
+    bottom: 1rem;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: -1;
+}
+main .hover-cards .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 335px));
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+main .hover-cards .cards .card {
+    height: 335px;
+    border-radius: 1.25rem;
+    border: 1px var(--color_E3E3E3) solid;
+    background-color: var(--color_F1F1F1);
+    overflow: hidden;
+    padding: 2.5rem 0 2.5rem 2rem;
+    position: relative;
+    display: grid;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+}
+main .hover-cards .cards .card:hover {
+    transform: scale(1.05);
+    background-color: var(--color_D62822);
+    transition: all 300ms ease-in-out;
+}
+main .hover-cards .cards .card .text-part .sm-title {
+    position: relative;
+    width: 100%;
+}
+main .hover-cards .cards .card .text-part .sm-title span {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color_323232);
+}
+main .hover-cards .cards .card:hover .text-part .sm-title span {
+    color: var(--color_FFEAE6);
+}
+main .hover-cards .cards .card .text-part .sm-title div {
+    position: absolute;
+    right: 0;
+    top: 0.75rem;
+    width: 73%;
+    border-bottom: 1px var(--color_7D7C7C) solid; 
+}
+main .hover-cards .cards .card:last-child .text-part .sm-title div {
+    width: 68%;
+}
+main .hover-cards .cards .card .text-part h3 {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    color: var(--color_C90000);
+}
+main .hover-cards .cards .card:hover .text-part h3 {
+    color: var(--color_FFC300);
+}
+main .hover-cards .cards .card .text-part p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color_504F4F);
+}
+main .hover-cards .cards .card:hover .text-part p {
+    color: var(--color_FFEAE6);
+}
+main .hover-cards .cards .card .text-part .price-off {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+main .hover-cards .cards .card:nth-child(1) .text-part .price-off {
+    margin-top: 2rem;
+}
+main .hover-cards .cards .card:nth-child(2) .text-part .price-off {
+    margin-top: 0.5rem;
+}
+main .hover-cards .cards .card:nth-child(3) .text-part .price-off {
+    margin-top: 3.5rem;
+}
+main .hover-cards .cards .card .text-part .price-off h6 {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color_7D7C7C);
+}
+main .hover-cards .cards .card:hover .text-part .price-off h6 {
+    color: var(--color_F1F1F1);
+}
+main .hover-cards .cards .card .text-part .price-off h4 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: var(--color_C90000);
+}
+main .hover-cards .cards .card:hover .text-part .price-off h4 {
+    color: var(--color_FFC300);
+}
+main .hover-cards .cards .card .text-part button {
+    padding: 0.5rem 0.75rem;
+    border-radius: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color_504F4F);
+    outline: none;
+    border: none;
+    margin-top: 2rem;
+}
+main .hover-cards .cards .card:hover .text-part button {
+    background-color: var(--color_FFFDE6);
+}
+main .hover-cards .cards .card .text-part button span {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color_F1F1F1);
+}
+main .hover-cards .cards .card:hover .text-part button span {
+    color: var(--color_323232);
+}
+main .hover-cards .cards .card:hover .text-part button svg path {
+    fill: var(--color_323232);
+}
+main .hover-cards .cards .card img {
+    width: 290px;
+    position: relative;
+    right: -7rem;
+    top: -14rem;
+    transform: scale(0.8);
+}
+main .mobile-apps-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5rem;
+    max-width: 1170px;
+    width: 100%;
+    margin-top: 10rem;
+}
+main .mobile-apps-download::after {
+    content: '';
+    width: 100%;
+    height: 368px;
+    z-index: -1;
+    background-color: var(--color_F1F1F1);
+    position: absolute;
+    border-radius: 0 500px 500px 0;
+    border: 1px var(--color_E3E3E3) solid;
+}
+main .mobile-apps-download img {
+    width: 401px;
+    height: 436px;
+    position: relative;
+    bottom: 1rem;
+}
+main .mobile-apps-download .texts-mobile p:first-child {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 32px;
+    color: var(--color_7D7C7C);
+}
+main .mobile-apps-download .texts-mobile h3 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    color: var(--color_C90000);
+}
+main .mobile-apps-download .texts-mobile p:last-child {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color_323232);
+}
+main .mobile-apps-download .downloads-buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 5%;
+    gap: 1.25rem;
+}
+main .mobile-apps-download .downloads-buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color_504F4F);
+    border-radius: 50px;
+}
+main .mobile-apps-download .downloads-buttons a .spans {
+    display: grid;
+}
+main .mobile-apps-download .downloads-buttons a .spans span:first-child {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.25rem;
+    color: var(--color_FFFFFF);
+}
+main .mobile-apps-download .downloads-buttons a .spans span:last-child {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25rem;
+    color: var(--color_FFFFFF);
+}
+main .map-search-box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color_323232);
+    padding: 100px 0;
+    border-radius: 1.25rem;
+    margin-top: 10rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+main .map-search-box h3 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    color: var(--color_FFFDE6);
+}
+main .map-search-box p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--color_F1F1F1);
+}
+main .map-search-box .search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 60%;
+    justify-self: center;
+    position: relative;
+}
+main .map-search-box .search-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 6.25rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--color_FFC300);
+}
+main .map-search-box .search-input input::placeholder {
+    color: var(--color_504F4F);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+main .map-search-box .search-input a {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    right: 0.25rem;
+    border-radius: 6.25rem;
+    background-color: var(--color_FFEAE6);
+    color: var(--color_323232);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+main .map-search-box img:not(:last-child) {
+    position: absolute;
+    opacity: 20%;
+    width: 227px;
+    bottom: -5rem;
+    left: 15%;
+}
+main .map-search-box img:last-child {
+    position: absolute;
+    opacity: 50%;
+    width: 212px;
+    top: 0;
+    left: -12%;
+}
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+    padding: 32px 5%;
+    background-color: var(--color_FFFDE6);
+}
+footer .footer {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: start;
+    align-items: center;
+    max-width: 1170px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
+    gap: 30px;
+}
+footer .footer .logo-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+footer .footer .logo-part .logo-mac {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+footer .footer .logo-part .logo-mac img {
+    width: 70px;
+    height: 70px;
+}
+footer .footer .logo-part .logo-mac h4 {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--color_323232);
+}
+footer .footer .logo-part .social-icons {
+    display: flex;
+    gap: 2rem;
+}
+footer .footer .links-and-times {
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+}
+footer .footer .links-and-times div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+footer .footer .links-and-times div h4, footer .footer .links-and-times div .link {
+    gap: 0;
+}
+footer .footer .links-and-times div h4, footer .footer .links-and-times div a, footer .footer .links-and-times div p {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    color: var(--color_323232);
+}
+footer .footer .links-and-times div h4 {
+    font-weight: 500;
+}
+footer .footer .links-and-times div a, footer .footer .links-and-times div p {
+    font-weight: 300;
+}

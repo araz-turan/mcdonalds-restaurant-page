@@ -1,0 +1,242 @@
+header {
+    margin-top: 0.5rem;
+    position: relative;
+}
+header nav {
+    padding: 0 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: space-between;
+    align-items: center;
+}
+header nav img {
+    width: 45px;
+}
+header nav .first-ul {
+    display: none;
+}
+header nav .burger-icon {
+    display: block;
+}
+header nav .burger-icon label {
+    display: flex;
+    justify-content: center;
+}
+header nav .burger-icon label i {
+    display: none;
+}
+.burger-icon ul::after {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color_FFD429);
+    position: absolute;
+    top: -0.25rem;
+    right: 0.65rem;
+    z-index: 2;
+    transform: rotate(45deg);
+} 
+.burger-icon ul {
+    border-radius: 0.5rem;
+    background-color: var(--color_FFD429);
+    padding: 1rem 0.5rem 1rem 1rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 98.2%;
+    position: absolute;
+    right: 0.5rem;
+    top: 3.25rem;
+}
+#burger-check:checked + label + ul {
+    display: flex;
+}
+.burger-icon ul li:not(:first-child) a {
+    color: var(--color_12131A);
+    font-weight: 500;
+}
+#burger-check:checked + label svg {
+    border: 1px var(--color_C90000) solid;
+    border-radius: 0.5rem;
+}
+#burger-check:checked + label svg path {
+    fill: var(--color_C90000);
+}
+header .bottom-header {
+    padding: 6rem 1rem 0 1rem;
+    gap: 10px;
+}
+header .bottom-header .header-bottom-text {
+    max-width: 270px;
+    gap: 0.75rem;
+}
+header .bottom-header .header-bottom-text .grand-text {
+    max-width: 14.5rem;
+}
+header .bottom-header .header-bottom-text .grand-text h1 {
+    line-height: 3rem;
+    font-size: 2rem;
+}
+header .bottom-header .header-bottom-text .grand-text p {
+    font-size: 15px;
+    line-height: 22.5px;
+}
+header .bottom-header .header-bottom-text .small-text .spans-small-text {
+    margin: 1rem 0;
+}
+header .bottom-header .header-bottom-text .small-text .buttons-small-text {
+    width: 100%;
+    gap: 1rem;
+}
+header .bottom-header .header-bottom-img .delivery-clock {
+    top: -3rem;
+    right: 140%;
+    transform: translateX(150%);
+}
+header .bottom-header .header-bottom-img .delivery-clock svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+header .bottom-header .header-bottom-img .delivery-clock .clock-icon span {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+header .bottom-header .header-bottom-img .delivery-clock p {
+    font-weight: 400;
+    line-height: 1rem;
+}
+@media  (max-width: 675px) {
+    header .bottom-header .header-bottom-text .small-text .buttons-small-text {
+        grid-template-columns: 140px 150px;
+        gap: 1rem;
+    }
+    header .bottom-header .header-bottom-text .small-text .buttons-small-text .plus-minus {
+        padding: 0.5rem 0.75rem;
+        width: auto;
+        height: auto;
+    }
+    header .bottom-header .header-bottom-text .small-text .buttons-small-text .plus-minus button {
+        width: 1rem;
+        height: 1rem;
+    }
+    header .bottom-header .header-bottom-text .small-text .buttons-small-text .plus-minus span {
+        font-size: 1rem;
+    }
+    header .bottom-header .header-bottom-text .small-text .buttons-small-text .order-button {
+        padding: 1rem 0.75rem;
+        height: auto;
+        width: auto;
+        gap: 0.75rem;
+    }
+    header .bottom-header .header-bottom-text .small-text .buttons-small-text .order-button p {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    header .bottom-header .header-bottom-text .small-text .buttons-small-text .order-button i {
+        font-size: 1rem;
+    }
+    header .bottom-header .header-bottom-img .delivery-clock {
+        top: -4.5rem;
+        right: 145%;
+        transform: translateX(145%);
+    }
+    header .bottom-header .header-bottom-img .delivery-clock .clock-icon span {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    header .bottom-header .header-bottom-img .delivery-clock p {
+        line-height: 1rem;
+    }
+}
+main .mobile-apps-download {
+    flex-direction: column-reverse;
+    align-items: start;
+    margin-top: 5rem;
+    position: relative;
+    padding: 60px 30% 0 2rem;
+    margin-bottom: 5rem;
+}
+main .mobile-apps-download::after {
+    left: -1rem;
+    height: 100%;
+}
+main .mobile-apps-download img {
+    bottom: -3.2rem;
+    left: -4rem;
+}
+main .mobile-apps-download .texts-mobile p:first-child {
+    font-size: 19px;
+    line-height: 28.5px;
+}
+main .mobile-apps-download .texts-mobile h3 {
+    font-size: 2.25rem;
+    line-height: 54px;
+}
+main .mobile-apps-download .texts-mobile p:last-child {
+    font-size: 15px;
+}
+main .mobile-apps-download .downloads-buttons a {
+    gap: 0.5rem;
+}
+@media (max-width: 735px) {
+    main .mobile-apps-download {
+        padding: 0;
+        max-width: 720px;
+        align-items: center;
+    }
+    main .mobile-apps-download::after {
+        border-radius: 500px 500px 0 0;
+        left: auto;
+    }
+    main .mobile-apps-download img {
+        width: 300px;
+        height: 336px;
+        bottom: -1.1rem;
+        left: auto;
+    }
+    main .mobile-apps-download .texts-mobile {
+        margin: 100px auto 0 auto;
+        width: 60%;
+        text-align: center;
+    }
+    main .mobile-apps-download .texts-mobile h3 {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+    main .mobile-apps-download .texts-mobile p:last-child {
+        font-size: 0.75rem;
+    }
+    main .mobile-apps-download .downloads-buttons {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(183px, auto));
+        justify-content: center;
+    }    
+}
+main .map-search-box {
+    height: 25rem;
+}
+main .map-search-box h3 {
+    font-size: 2rem;
+    line-height: 42px;
+}
+main .map-search-box .search-input {
+    width: 100%;
+}
+main .map-search-box img:last-child {
+    top: -1.5rem;
+    left: -15%;
+}
+footer .footer {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+footer .footer .links-and-times {
+    gap: 58px;
+}
+footer .footer .links-and-times div a, footer .footer .links-and-times div p {
+    font-size: 1rem;
+}
